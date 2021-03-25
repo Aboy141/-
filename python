@@ -1,0 +1,15 @@
+while True:
+    tall = float(input('请输入你的身高'))
+    weight = float(input('请输入你的体重'))
+    Bmi = weight / tall ** 2
+    if (Bmi > 18.5):
+        j = '偏瘦'
+    elif(Bmi < 24 ):
+        J = '正常'
+    else:
+        j = '超重'
+
+    print('BMI值是',Bmi,J)
+    n = input('是否退出程序')
+    if(n == 'y'):
+        break
