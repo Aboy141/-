@@ -10,8 +10,8 @@ int main()
 		i = 0;
 		while(words[i] != '\n' && words[i] != '\0')
 			i++;
-		if(words[i] == '\n')
-			words[i] == '0';
+		if(words[i] == '\n')             //如果get_s()不用把换行符换成空字符，因为get_s()会丢弃换行符
+ 			words[i] == '0';
 		else 
 			while(getchar() != '\n')
 				continue;
@@ -20,3 +20,31 @@ int main()
 	puts("done");
 	return 0;
 }
+//
+编写fgets（）函数
+#include <stdio.h>
+char gets(char *sr,int b)
+{
+	char *re;
+	int i = 0;
+	re = fgets(sr,b,stdin);
+	while(re != NUll)
+	{
+		if(sr[i] != NULL && sr[i] !='0')
+		if(re == '\n')
+			re == '0';
+		else
+			continue; 
+	}
+	return re;
+}
+void put1(const char *string) //不改变字符串，同时打印字符串和不添加换行符
+{
+	while(*string)
+	{
+		putchar("*string++"); 
+	}
+}
+
+	
+
